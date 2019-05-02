@@ -1,9 +1,26 @@
 # barberApp
 simple app for scheduling appointments
 
-Para rodar o app:
+## Requirements
+
+- Yarn
+- Redis
+- Postgres
+
+## Installation
+
+```sh
+yarn install
+```
+
+Run postgres:
 `docker run --name database -p 5432:5432 -d -t kartoza/postgis`
 
-Crie uma database com o nome configurado no `src/config/database` (você pode altera-lo)
+Create a database with the name configured in `src/config/database` (You can change it)
+`npx sequelize db:create`
 
-Faça as migrations `npx sequelize db:migrate`
+Run the migrations `npx sequelize db:migrate`
+
+then start the application
+
+`yarn start`
